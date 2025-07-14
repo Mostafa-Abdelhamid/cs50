@@ -10,7 +10,7 @@
             box-sizing: border-box;
         }
 
-        body {
+        .container {
             height: 100vh;
             display: flex;
             flex-direction: column;
@@ -18,6 +18,15 @@
             align-items: center;
             font-family: Arial, sans-serif;
             background-color: white;
+        }
+
+        .links {
+            position: absolute;
+            font-size: 20px;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 20px;
         }
 
         h1 {
@@ -67,11 +76,21 @@
     </style>
 </head>
 <body>
-<h1>Google Image Search</h1>
+
+
+<div class ="container">
+    <h1>Google Image Search</h1>
     <form action="https://www.google.com/search" method="GET" target="_blank">
         <input id="bar" type="text" name="q" placeholder="Search for images...">
         <input type="hidden" name="udm" value="2"> <!-- triggers image search -->
         <input id="click" type="submit" value="Search Images">
     </form>
+</div>
+
+<div class="links">
+    <a href ="index.html">Google Search</a>
+    <a href="adv.html">Google Advanced Search</a>
+</div>
+
 </body>
 </html>
